@@ -1,0 +1,578 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/*asterix wildcard selector to overide default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    /* generic project styles */
+    color: #ffffff;
+    font-family: 'roboto', Lucida Sans, monospace;
+}
+
+h1,
+h2 {
+    font-family: 'roboto', 'Lucida Sans';
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'roboto', 'Lucida Sans';
+    font-size: 20px;
+    color: #fafafa;
+}
+
+.hidden-heading {
+    display: none;
+}
+
+/* Logo */
+#logo {
+    height: 46px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#text-logo {
+    display: none;
+}
+
+#image-logo {
+    height: 70px
+}
+
+
+input:placeholder-shown {
+    font-style: italic;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu>li {
+    /* spaces out drop down menu items */
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid black
+}
+
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #000000;
+    display: none;
+    top: 100%;
+}
+
+/* Nav Toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+
+/* Main content */
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+
+main {
+
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    margin-top: 70px;
+}
+
+/* Hero Section styles */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/gallery/stone.webp")center center/cover;
+    position: relative;
+    background-position: center;
+    background-size: cover; 
+}
+
+#hero-logo {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+    margin: auto;
+
+}
+
+#cover-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 0cap;
+    margin: 0px;
+}
+
+#hero > h2 {
+    display: none;
+}
+
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+}
+
+.text-container {
+    width: 90%;
+    margin: 40px;
+}
+
+.text-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
+.divider-image {
+    clip-path: polygon(0 0, 100% 8%, 100% 92%, 0 100%);
+
+    max-height: 30vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+/* gallery section*/
+
+#gallery-photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#gallery-photos {
+    /*removes default white gap between images*/
+    line-height: 0;
+    column-gap: 0;
+}
+
+
+/* Equipment Section */
+
+
+#equipment-items {
+    background: url('../images/gallery/stone.webp') no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#equipment-items div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 25px;
+    flex-basis: 200px;
+    flex-grow: 1;
+    /*creates a grid around the equipment list*/
+    border: 2px solid #9EAFBD;
+
+}
+
+
+/* Contact Us*/
+
+#contact {
+    padding: 20px;
+}
+
+
+#contact-form {
+    color: #ffffff;
+    background-color: #62555e;
+    color: #fafafa;
+    padding: 30px;
+    margin: auto;
+}
+
+#contact-form > h2 {
+    margin-bottom: 20px;
+    color: #fafafa; 
+}
+
+#contact-form > p {
+    font-size: 13px;
+}
+
+
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.send-button {
+    margin-top: 20px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #D9BF8D;
+    color: #000000;
+}
+
+/* Thankyou for subscribing */
+#thankyou {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#thankyou-box {
+
+    color: #ffffff;
+    background-color:#3a3a3a;
+    color: #fafafa;
+    padding: 30px;
+    margin: auto;
+}
+
+/* google map */
+#google-map {
+    width: 100%; 
+}
+
+
+
+/* footer */
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: #d9bf8d;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #d9bf8d;
+}
+
+
+.divider-image img {
+    width: 100%;
+}
+
+#footer-text {
+    text-align: center;
+    color: #d9bf8d;
+} 
+
+/*-----------------------------MEDIA QUERIES--------------------------------*/
+
+/* Media Query: Mobile  */ 
+@media screen and (min-width: 576px) {
+    #text-logo {
+        height: 1200px;
+    }
+    #contact-form > h2 {
+        font-size: 25px;
+    }
+
+}
+
+/* media query: large or landscape phones */
+@media screen and (min-width: 576px) and (max-width: 769px) {
+
+    #gallery-photos {
+        column-count: 2;
+        column-gap: 0px;
+    }
+
+}
+
+
+/* Media Query: Tablets and larger  */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+
+
+
+    
+    /* Header */
+    nav {
+        display: block;
+        position: static;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #text-logo {
+        font-size: 200%;
+    }
+
+    #cover-text > h3 {
+        font-size: 25px;
+    }
+
+    main {
+        /* push main content down to accomadate larger header */
+        margin-top: 1px;
+    }
+
+    /*hero */
+    #cover-text {
+        width: 60%;
+        font-size: 50px;
+
+    }
+
+    /* Equipment Section */
+
+
+    /*gallery photos */
+    #gallery-photos {
+        column-count: 3;
+        column-gap: 0px;
+    }
+
+
+/* contact form */
+
+#contact {
+    background-position: center;
+    position: relative;
+}
+
+#contact-form {
+    max-width: 600px;
+    left: 10%;
+    top: 150px;
+    width: 600px;
+    
+}
+
+.text-input:hover {
+    border-color: #f16c6b;
+}
+
+.send-button:hover {
+    background-color: #fafafa;
+    color: #454b1b;
+}
+}
+
+/* Media Query: laptops and desktops */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+   
+        /* Header */
+        nav {
+            display: block;
+            position: static;
+            box-shadow: none;
+            width: fit-content;
+            padding-right: 1rem;
+        }
+    
+        #menu {
+            display: flex;
+    
+        }
+    
+        #menu>li {
+            padding-left: 1rem;
+        }
+    
+        .nav-toggle-label {
+            display: none;
+        }
+   
+   
+    #menu a:hover {
+        border-bottom: 1px solid #ffffff
+    }
+
+    #hero-logo {
+        width: 50%;
+    }
+
+    #equipment {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #equipment>div {
+        flex: 1;
+    }
+
+    #cover-text {
+        width: 60%;
+    }
+
+    #cover-text > h3 {
+        font-size: 30px;
+    }
+
+    /* gallery photos */
+    #gallery-photos {
+        column-count: 4;
+
+    }
+    #contact-form {
+
+        width: 700px;
+        
+    }
+    
+
+}
+
+/* Media Query: Large Screens  */
+@media screen and (min-width: 1201px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: static;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+
+
+    #hero-logo {
+        width: 50%;
+    }
+
+
+    /* Reasons section */
+    #equipment {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #equipment>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+        
+    /* gallery photos */
+    #gallery-photos {
+        column-count: 4;
+    
+        }
+
+    #contact-form {
+        width: 800px;
+        }
+
+}
