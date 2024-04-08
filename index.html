@@ -22,6 +22,13 @@
 
   <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
   <link rel="preload" fetchpriority="high" as="image" href="assets/images/gallery/stone.webp " type="image/webp">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({publicKey: "MP4UQC8Sqt-nQvyHM",});
+    })();
+  </script>
 </head>
 
 <body>
@@ -279,8 +286,7 @@
 
 
     <section id="contact">
-      <form id="contact-form" method="post" action="contact-form-handler.php">
-        <!--
+      <form id="contact-form" onsubmit="return sendMail(this);">
         <h2><i class="fa-solid fa-address-card"></i> Contact Us</h2>
         <div>
           <p>Get in touch with us if you have any questions. We look forward to hearing from you.</p>
@@ -290,23 +296,21 @@
           <h3><i class="fa-solid fa-phone"></i> +353 894518613</h3>
           <br>
         </div>
-        -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScoeLzCM5WSdjwKY7IePpEjtj2_SsKKXDQ5QqdUoM5qJam96A/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <!--
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScoeLzCM5WSdjwKY7IePpEjtj2_SsKKXDQ5QqdUoM5qJam96A/viewform?embedded=true"
+          width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <br>
-        <!-- 
-        <label for="first_name">First Name</label>
-        <input type="text" name="first_name" id="first_name" class="text-input" placeholder="First Name"
+        -->
+        <label for="first_name">Name</label>
+        <input type="text" name="name" id="fullname" class="text-input" placeholder="Name"
           aria-label="Enter your first name" required>
         <br>
-        <label for="last_name">Last Name</label>
-        <input type="text" name="last_name" id="last_name" class="text-input" placeholder="Last Name"
-          aria-label="Enter your last name" required>
-        <br>
         <label for="email_address">Email Address</label>
-        <input type="email" name="email_address" id="email_address" class="text-input" placeholder="Email Address"
+        <input type="email" name="emailaddress" id="email_address" class="text-input" placeholder="Email Address"
           aria-label="Enter your email address" required>
         <br>
-        <label for="message">Subject</label>
+        <label for="message">Message</label>
         <input type="text" name="message" id="message" class="text-input" placeholder="Type your message here..."
           aria-label="Enter your message here" required>
         <p>By clicking Send I agree that Studio Moo Moo processes my message and personal data in order to contact me
@@ -316,7 +320,6 @@
           Privacy Policy.</p>
         <button type="submit" class="send-button" aria-label="Submit your information">Submit</button>
         <br>
--->
       </form>
     </section>
 
@@ -354,6 +357,7 @@
       </ul>
     </div>
   </footer>
+  <script src="assets/js/sendEmail.js"></script>
   <!--Font Awesome Kit-->
   <script src="https://kit.fontawesome.com/1e7673fa14.js" crossorigin="anonymous"></script>
 </body>
