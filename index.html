@@ -29,7 +29,7 @@
       emailjs.init({publicKey: "MP4UQC8Sqt-nQvyHM",});
     })();
   </script>
-</head>
+  <script src="jquery-3.7.1.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>head>
 
 <body>
   <!--Header-->
@@ -353,13 +353,15 @@
         </li>
       </ul>
       <ul id="footer-text">
-        <li>©Studio Moo Moo 2023. All rights reserved.</li>
+        <li>Copyright &copy; Studio Moo Moo <span id="copyright"></span></li>
       </ul>
     </div>
   </footer>
+  <!--Email Form Script-->
   <script src="assets/js/sendEmail.js"></script>
   <!--Font Awesome Kit-->
   <script src="https://kit.fontawesome.com/1e7673fa14.js" crossorigin="anonymous"></script>
+  <script>$("#copyright").text(new Date().getFullYear());</script>
 </body>
 
 </html>

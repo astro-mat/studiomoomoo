@@ -285,6 +285,8 @@ main {
     font-size: 100%;
     background-color: #D9BF8D;
     color: #000000;
+    align-items: center;
+    position: relative;
 }
 
 /* Thankyou for subscribing */
