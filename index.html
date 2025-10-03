@@ -286,21 +286,32 @@
 
 
     <section id="contact">
-      <form id="contact-form" onsubmit="return sendMail(this);">
-        <!-- <h2><i class="fa-solid fa-address-card"></i> Contact Us</h2>
-        <div>
-          <p>Get in touch with us if you have any questions. We look forward to hearing from you.</p>
-          <br>
-          <h3><i class="fa-solid fa-location-dot"></i> Studio Moo Moo, Curraghmartin, Drumsna, Co Leitrim, N41 Y635</h3>
-          <br>
-          <h3><i class="fa-solid fa-phone"></i> +353 894518613</h3>
-          <br>
-        </div> -->
-        
-        <iframe
+
+      <form id="contact-form" action="https://formspree.io/f/xeorkebr" method="POST">
+        <h2><i class="fa-solid fa-address-card"></i> Contact Us</h2>
+        <p>Get in touch with us if you have any questions. We look forward to hearing from you.</p>
+
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" class="text-input" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" class="text-input" placeholder="Type your message here..." rows="5" required></textarea>
+
+        <p class="privacy">
+          By clicking Send, I agree that Studio Moo Moo processes my message and personal data to contact me.
+        </p>
+
+        <button type="submit" class="send-button">Send</button>
+      </form>
+
+
+
+
+        <!-- google form -->
+        <!-- <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLScoeLzCM5WSdjwKY7IePpEjtj2_SsKKXDQ5QqdUoM5qJam96A/viewform?embedded=true"
           width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        <br>
+        <br> -->
        
         <!-- <label for="first_name">Name</label>
         <input type="text" name="name" id="fullname" class="text-input" placeholder="Name"
