@@ -420,12 +420,21 @@ textarea.text-input {
 
 /* Media Query: Mobile  */ 
 @media screen and (min-width: 576px) {
+
     #text-logo {
         height: 1200px;
     }
+
     #contact-form > h2 {
         font-size: 25px;
     }
+
+    /*gallery photos */
+    #gallery-photos {
+        column-count: 3;
+        column-gap: 0px;
+    }
+
 
 }
 
